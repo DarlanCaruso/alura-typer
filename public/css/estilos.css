@@ -1,0 +1,142 @@
+body {
+    overflow: scroll;
+}
+
+@media (max-width: 1336px) {
+
+    .btn-large,
+    #frase-id {
+        display: block;
+        min-width: 100%;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+}
+
+/* Frase e campo de digitação */
+
+.frase {
+    font-size: 150%;
+}
+
+.informacoes {
+    font-size: 90%;
+}
+
+.icones {
+    vertical-align: middle;
+}
+
+.campo-digitacao {
+    height: 150px;
+    resize: none;
+    font-size: 150%;
+    border: 3px solid darkslategray;
+    outline: none;
+}
+
+.campo-true {border: 3px solid darkseagreen;}
+.campo-false {border: 3px solid crimson;}
+
+.campo-desativado {
+    background-color: lightgrey;
+}
+
+
+/* Placar */
+
+.placar {
+    display: none;
+    margin: 5em 0;
+}
+
+.placar h5 {
+    background-color: #0288d1;
+    color: white;
+    padding: 1em;
+    font-size: 110%;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+}
+
+/* Modais */
+
+#loading-modal > *{
+    float: left;
+    vertical-align: middle;
+    padding: 5px;
+    font-size: 130%;
+}
+
+.card-panel {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    z-index: 2;
+}
+
+.erro {
+    color: white;
+}
+
+.placar-modal {
+    color: white;
+}
+
+
+/* Botoes */
+
+.botoes {
+    width: 100%;
+}
+
+.campo-texto {
+    max-width: 10%;
+    border: 2px solid #fbc02d !important;
+    padding: 0 10px 5px 10px !important;
+    font-size: 120% !important;
+    vertical-align: top !important;
+}
+
+.btn-floating {
+    border-radius: 2px !important;
+}
+
+#botao-backup-placar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+}
+
+#botao-backup-placar > * {
+    float: left;
+}
+
+#botao-backup-placar p {
+    display: none;
+    line-height: 55.5px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    border: 1px solid #66bb6a;
+    margin: 0 5px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+/* Escolher usuario */
+
+#usuarios,
+.selectize-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    display: inline-block;
+    width: 10% !important;
+    background-image: none !important;
+    background-color: white !important;
+}

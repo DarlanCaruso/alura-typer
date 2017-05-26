@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alura Typer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Seja bem vindo ao curso de jQuery :) -->
+    <div class="container">
+        <h1 class="center">Typer</h1>
+        <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam exercitationem quae numquam explicabo officiis laudantium, iusto libero nam consequuntur repellat! Hic, cupiditate itaque perferendis tenetur, doloremque ad impedit iure aspernatur.</p>
+
+        <div class="card-panel blue-grey lighten-5" id="loading-modal">
+            <img src="img/spinner.gif" alt="Carregando"/>
+            <p class="loading">Carregando...</p>
+        </div>
+
+        <div class="card-panel red darken-2" id="erro-modal">
+            <p class="erro">Ocorreu um erro, por favor tente novamente.</p>
+        </div>
+
+        <div class="card-panel blue darken-2" id="placar-modal">
+            <p class="placar-modal">Placar sinconizado com sucesso.</p>
+        </div>
+
+        <ul class="informacoes center">
+            <li>
+                <i class="tiny material-icons icones">description</i>
+                <span id="tamanho-palavra">5</span> palavras
+            </li>
+            <li>
+                <i class="tiny material-icons icones">query_builder</i>
+                <span id="tempo-digitacao">5</span> segundos
+            </li>
+        </ul>
+
+        <textarea class="campo-digitacao" cols="90" rows="10"></textarea>
+
+        <div class="botoes center">
+            <a class="waves-effect red darken-4 btn-large disabled" id="botao-reiniciar"><i class="material-icons left">restore</i>Reiniciar</a>
+            <a class="waves-effect blue darken-2 btn-large" id="botao-placar"><i class="material-icons left">assignment</i>Placar</a>   
+            <a class="waves-effect teal darken-2 btn-large" id="botao-frase"><i class="material-icons left">shuffle</i>Mudar Frase</a>   
+            <a class="waves-effect yellow darken-2 btn-large" id="botao-troca-frase"><i class="material-icons left">repeat_one</i>Escolha a frase: </a>   
+            <input id="frase-id" class="campo-texto" type="number" min="0" max="10"/>
+            <div id="botao-backup-placar">
+                <a class="waves-effect green lighten-1 btn-large btn-floating botao-backup"><i class="material-icons left">settings_backup_restore</i>Backup Placar</a>   
+                <p class="backup-placar">Sincronizar Placar</p>  
+            </div>
+        </div>
+
+        <div class="select-usuarios">
+            <select id="usuarios">
+                <option value="darlan">Darlan</option>
+            </select>
+        </div>
+
+        <ul class="center">
+            <li><span id="contador-caracters">0</span> caracters</li>
+            <li><span id="contador-palavras">0</span> palavras</li>
+        </ul>
+
+        <section class="placar">
+            <h5 class="center">Placar</h2>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th>Nome do jogador</th>    
+                        <th>N° de palavras</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- O placar é inserido via Javascript -->
+                    <td colspan="3" class="info">Não existem entradas no placar</td>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
+    <script src="js/frase.js"></script>
+    <script src="js/selectize.js"></script>
+</body>
+</html>
